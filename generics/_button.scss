@@ -1,0 +1,64 @@
+/**
+* @stylesheet _button.scss Generic Button Definitions
+* @parent styles.styling 4
+*
+* @description
+* Generic definitions for button styling.
+*
+* @styles buttons Buttons
+*/
+@import 'style-guide/colors';
+
+.btn{
+    text-decoration: none;
+    cursor: pointer;
+
+    &_#{$color} {
+        @extend .btn;
+        @include btn($color);
+
+        &_inverted{
+            @extend .btn;
+            @include btn($color, 1);
+        }
+    }
+}
+
+@mixin btn($color: $white, $inverted: 0, $border: 0) {
+
+    @if($inverted == 0){
+        background-color: color($color);
+        max-width: 230px;
+        min-width: 210px;
+        height: 65px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: $font-primary;
+
+        &:hover {
+            background-color: color('#{$color}-hover');
+        }
+
+        @if($border != 0){
+            border: 2px solid color('white');
+        }
+    }
+
+    @else{
+        background-color: color('#{$color}-hover');
+        max-width: 230px;
+        min-width: 210px;
+        height: 65px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: $font-primary;
+
+        &:hover {
+            background-color: color($color);
+        }
+
+        @if($border != 0){
+            border: 2px solid color('white');
+        }
+    }
+}

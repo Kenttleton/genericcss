@@ -1,0 +1,107 @@
+/**
+* @stylesheet _cursers&_scss Cursors
+* @parent styles&_curser 0
+*
+* @description
+* Generic cursors to be used wherever&_
+*
+* @styles cursors Cursers
+*/
+
+.cursor {
+    &_auto{
+        cursor: auto;
+    }
+    &_default{
+        cursor: default;
+    }
+    &_none{
+        cursor: none;
+    }
+    &_context-menu{
+        cursor: context-menu;
+    }
+    &_help{
+        cursor: help;
+    }
+    &_pointer{
+        cursor: pointer;
+    }
+    &_progress{
+        cursor: progress;
+    }
+    &_wait{
+        cursor: wait;
+    }
+    &_cell{
+        cursor: cell;
+    }
+    &_crosshair{
+        cursor: crosshair;
+    }
+    &_text{
+        cursor: text;
+    }
+    &_vertical-text{
+        cursor: vertical-text;
+    }
+    &_alias{
+        cursor: alias;
+    }
+    &_copy{
+        cursor: copy;
+    }
+    &_move{
+        cursor: move;
+    }
+    &_no-drop{
+        cursor: no-drop;
+    }
+    &_not-allowed{
+        cursor: not-allowed;
+    }
+    &_all-scroll{
+        cursor: all-scroll;
+    }
+    &_col-resize{
+        cursor: col-resize;
+    }
+    &_row-resize{
+        cursor: row-resize;
+    }
+    &_n-resize{
+        cursor: n-resize;
+    }
+    &_e-resize{
+        cursor: e-resize;
+    }
+    &_s-resize{
+        cursor: s-resize;
+    }
+    &_w-resize{
+        cursor: w-resize;
+    }
+    &_ns-resize{
+        cursor: ns-resize;
+    }
+    &_ew-resize{
+        cursor: ew-resize;
+    }
+    &_ne-resize{
+        cursor: ne-resize;
+    }
+    &_nw-resize{
+        cursor: nw-resize;
+    }
+    &_se-resize{
+        cursor: se-resize;
+    }
+    &_sw-resize{
+        cursor: sw-resize; }
+    &_nesw-resize{
+        cursor: nesw-resize;
+    }
+    &_nwse-resize{
+        cursor: nwse-resize;
+    }
+}

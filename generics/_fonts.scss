@@ -1,0 +1,69 @@
+// ==================================================
+//      FONTS
+// ==================================================
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/ProximaNova-Regular.eot');
+  src: url('/assets/fonts/ProximaNova-Regular.woff2') format('woff2'),
+    url('/assets/fonts/ProximaNova-Regular.woff') format('woff'),
+    url('/assets/fonts/ProximaNova-Regular.ttf') format('truetype'),
+    url('/assets/fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'),
+    url('/assets/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/ProximaNova-Bold.eot');
+  src: url('/assets/fonts/ProximaNova-Bold.woff2') format('woff2'),
+    url('/assets/fonts/ProximaNova-Bold.woff') format('woff'),
+    url('/assets/fonts/ProximaNova-Bold.ttf') format('truetype'),
+    url('/assets/fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg'),
+    url('/assets/fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Montserrat-Black.eot');
+  src: url('/assets/fonts/Montserrat-Black.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat-Black.woff') format('woff'),
+    url('/assets/fonts/Montserrat-Black.ttf') format('truetype'),
+    url('/assets/fonts/Montserrat-Black.svg#Montserrat-Black') format('svg'),
+    url('/assets/fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Montserrat-Light.eot');
+  src: url('/assets/fonts/Montserrat-Light.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat-Light.woff') format('woff'),
+    url('/assets/fonts/Montserrat-Light.ttf') format('truetype'),
+    url('/assets/fonts/Montserrat-Light.svg#Montserrat-Light') format('svg'),
+    url('/assets/fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Montserrat-Bold.eot');
+  src: url('/assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat-Bold.woff') format('woff'),
+    url('/assets/fonts/Montserrat-Bold.ttf') format('truetype'),
+    url('/assets/fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg'),
+    url('/assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype');
+}
+
+$font-primary: 'ProximaNova-Regular';
+$font-primary-bold: 'ProximaNova-Bold';
+$font-secondary: 'Montserrat-Black';
+$font-secondary-bold: 'Montserrat-Bold';
+$font-secondary-light: 'Montserrat-Light';

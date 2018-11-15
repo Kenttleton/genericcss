@@ -1,0 +1,84 @@
+/**
+* @stylesheet _colors.scss Stockup
+* @parent styles.color-pallette 0
+*
+* @description
+* Color pallette for the Stockup program.
+*
+* @styles colors-stockup Stockup
+*
+* $black: black;
+* $white: white;
+* $grey: grey;
+* $red: red;
+* $orange: orange;
+* $yellow: yellow;
+* $green: green;
+* $blue: blue;
+* $indigo: indigo;
+* $purple: purple;
+*/
+// ==================================================
+//      COLOR-PALLETTE
+// ==================================================
+
+$colors:
+'black'  rgb(0, 0, 0),
+'white' rgb(255, 255, 255),
+'grey' rgb(93, 93, 93),
+'red' rgb(255, 0, 0),
+'orange' rgb(234, 114, 0),
+'yellow' rgb(255, 255, 0),
+'green' rgb(0, 128, 0),
+'blue' rgb(12, 52, 85),
+'purple' rgb(128, 0, 128),
+
+
+// ==================================================
+//      COLOR-LIGHT
+// ==================================================
+
+'grey-light' rgb(238, 238, 238),
+'blue-light' lighten(color('blue'), 15%),
+'orange-light' lighten(color('orange'), 15%),
+
+// ==================================================
+//      COLOR-DARK
+// ==================================================
+
+'grey-dark' rgb(62, 62, 62),
+'blue-dark' darken(color('blue'), 15%),
+'orange-dark' darken(color('orange'), 15%),
+
+// ==================================================
+//      COLORS-HOVER
+// ==================================================
+
+'blue-hover' darken(color('blue'), 10%),
+'orange-hover' darken(color('orange'), 10%),
+
+// ==================================================
+//      COLORS-ACTIVE
+// ==================================================
+
+// ==================================================
+//      COLORS-VISITED
+// ==================================================
+
+// ==================================================
+//      COLOR-SPECIAL
+// ==================================================
+
+'yellow-caution' rgb(238, 210, 2);
+
+// ==================================================
+//      COLOR-FUNCTIONS
+// ==================================================
+
+@function color($color){
+   @each $c in $colors {
+       @if(#{nth($c, 1)} === $color){
+        @return #{nth($c, 2)};
+        }
+   }
+}

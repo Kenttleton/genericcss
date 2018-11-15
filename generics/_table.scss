@@ -1,0 +1,40 @@
+/**
+* @stylesheet _table.scss Generic Definitions for Styling Tables
+* @parent styles.styling 3
+*
+* @description
+* Generic definitions for styling tables
+*
+* @styles tables Tables
+*/
+@import 'style-guide/colors';
+
+.table{
+    &.header{
+        &_#{$color}:nth-child(1){
+            background-color: color($color)
+        }
+    }
+    &.striped{
+        &_rows{
+            &-even_#{$color}:nth-child(even){
+                background-color: color($color);
+            }
+            &-odd_#{$color}:nth-child(odd){
+                background-color: color($color);
+            }
+        }
+        &_columns{
+            &-even_#{$color}{
+                tr:nth-child(even){
+                    background-color: color($color);
+                }
+            }
+            &-odd_#{$color}{
+                tr:nth-child(odd){
+                    background-color: color($color);
+                }
+            }
+        }
+    }
+}

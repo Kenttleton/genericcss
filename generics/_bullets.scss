@@ -1,0 +1,31 @@
+/**
+* @stylesheet _bullets.scss Generic Bullet Definitions
+* @parent styles.styling 2
+*
+* @description
+* Generic definitions for setting bullets on elements regardless of HTML tag.
+*
+* @styles bullets Bullet Points
+*/
+@import 'style-guide/colors';
+
+.bullets {
+    &:nth-child(n)::before {
+        align-items: center;
+        color: $orange;
+        font-family: 'FontAwesome';
+        text-align: center;
+    }
+
+    &_plus-sign{
+        @extend .bullets:nth-child(n)::before;
+        content: '\f067';
+        margin-right: 10px;
+        font-size: 12px;
+
+        &_#{$color}{
+            @extend .bullets_plus-sign;
+            color: color($color);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+/**
+* @stylesheet _link.scss Generic Link Definitions
+* @parent styles.styling 5
+*
+* @description
+* Generic definitions for styling links.
+*
+* @styles links Links/Hyperlinks
+*/
+@import 'style-guide/colors';
+
+.link {
+  cursor: pointer;
+
+  &_#{$color} {
+    color: color($color);
+
+    &:hover {
+      color: color('#{$color}-hover');
+    }
+
+    &:active {
+      color: color('#{$color}-active');
+    }
+
+    &:visited {
+      color: color('#{$color}-visited');
+    }
+
+    &_no-underline{
+      @extend .link_#{$color}:visited:active:hover;
+      text-decoration: none;
+    }
+  }
+}

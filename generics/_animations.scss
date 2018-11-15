@@ -1,0 +1,38 @@
+/**
+* @parent styles.styling
+* @stylesheet _animations.scss Generic Definitions for Animating Elements
+*
+*
+* @description
+* Minor animations to make the website *feel* better.
+*
+* @styles animations Animations
+*/
+
+@keyframes wiggleRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wiggleLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
