@@ -72,25 +72,106 @@ $colors:
 'yellow-caution' rgb(238, 210, 2),
 
 // ==================================================
-//      COLOR-SOCIAL
+//      COLOR-SOCIAL - https://www.lockedownseo.com/social-media-colors/
 // ==================================================
 
-'blue-facebook' rgb(59, 89, 152),
-'white-facebook' rgb(255, 255, 255),
-'blue-facebook-messenger' rgb(0, 132, 255),
-'white-facebook-messenger' rgb(255, 255, 255),
-'blue-twitter' rgb(56, 161, 243),
-'white-twitter' rgb(255, 255, 255),
-'red-pinterest' rgb(189, 8, 28),
-'white-pinterest' rgb(255, 255, 255),
-'yellow-snapchat' rgb(255, 252, 0),
-'white-snapchat' rgb(255, 255, 255),
-'blue-linkedin' rgb(0, 119, 181),
-'white-linkedin' rgb(255, 255, 255),
-'red-google-plus' rgb(211, 72, 54),
-'white-google-plus' rgb(255, 255, 255),
-'red-youtube' rgb(237, 56, 51),
-'white-youtube' rgb(255, 255, 255);
+'android-primary' rgb(164, 198, 57),
+'android-primary' rgb(255, 255, 255),
+
+'amazon-primary' rgb(255, 153, 0),
+'amazon-secondary' rgb(124,124,124),
+
+'apple-primary' rgb(166, 177, 183),
+'apple-secondary' rgb(0, 0, 0),
+
+'deviantart-primary' rgb(5, 204, 71),
+'deviantart-secondary' rgb(255, 255, 255),
+
+'discord-primary' rgb(114, 137, 218),
+'discord-secondary' rgb(255, 255, 255),
+
+'facebook-primary' rgb(59, 89, 152),
+'facebook-secondary' rgb(255, 255, 255),
+'facebook-messenger-primary' rgb(0, 132, 255),
+'facebook-messenger-secondary' rgb(255, 255, 255),
+
+'flickr-primary' rgb(244, 0, 131),
+'flickr-secondary' rgb(255, 255, 255),
+
+'foursquare-primary' rgb(249, 72, 119),
+'foursquare-secondary' rgb(255, 255, 255),
+
+'google-blue' rgb(66, 133, 244),
+'google-red' rgb(234, 67, 53),
+'google-green' rgb(52, 168, 83),
+'google-yellow' rgb(251, 188, 5),
+'google-multiple' linear-gradient(135 deg, to right, color('google-blue') 25%, color('google-red') 25% 50%, color('google-green') 50% 75%, color('google-yellow') 75%),
+'google-plus-primary' rgb(219, 68, 55),
+'google-plus-secondary' rgb(255, 255, 255),
+
+'instagram-primary' rgb(35, 31, 32),
+'instagram-secondary' rgb(255, 255, 255),
+'instagram-gradient' linear-gradient(rgb(76, 95, 215), rgb(114, 50, 189), rgb(195, 42, 163), rgb(244, 111, 48), rgb(255, 220, 125)),
+
+'linkedin-primary' rgb(0, 119, 181),
+'linkedin-secondary' rgb(255, 255, 255),
+
+'medium-primary' rgb(2, 184, 117),
+'medium-secondary' rgb(255, 255, 255),
+
+'microsoft-red' rgb(243, 80, 34),
+'microsoft-green' rgb(128, 187, 3),
+'microsoft-blue' rgb(3, 165, 240),
+'microsoft-yellow' rgb(255, 185, 3),
+
+'pinterest-primary' rgb(189, 8, 28),
+'pinterest-secondary' rgb(255, 255, 255),
+
+'pocket-primary' rgb(238, 64, 86),
+'pocket-secondary' rgb(255, 255, 255),
+
+'reddit-primary' rgb(255, 69, 0),
+'reddit-secondary' rgb(255, 255, 255),
+
+'skype-primary' rgb(0, 175, 240),
+'skype-secondary' rgb(255, 255, 255),
+
+'slack-primary' rgb(77, 57, 75),
+'slack-secondary' rgb(255, 255, 255),
+
+'snapchat-primary' rgb(255, 252, 0),
+'snapchat-secondary' rgb(255, 255, 255),
+'snapchat-ternary' rgb(0, 0, 0),
+
+'soundcloud-primary' rgb(255, 85, 0),
+'soundcloud-secondary' rgb(255, 255, 255),
+
+'spotify-primary' rgb(30, 215, 96),
+'spotify-secondary' rgb(255, 255, 255),
+
+'steam-primary' rgb(23, 26, 33),
+'steam-secondary' rgb(199, 213, 224),
+
+'tumblr-primary' rgb(54, 70, 93),
+'tumblr-secondary' rgb(255, 255, 255),
+
+'twitch-primary' rgb(100, 65, 164),
+'twitch-secondary' rgb(255, 255, 255),
+
+'twitter-primary' rgb(56, 161, 243),
+'twitter-secondary' rgb(255, 255, 255),
+
+'vimeo-primary' rgb(26, 183, 234),
+'vimeo-secondary' rgb(255, 255, 255),
+
+'vine-primary' rgb(0, 180, 137),
+'vine-secondary' rgb(255, 255, 255),
+
+'whatsapp-primary' rgb(37, 211, 102),
+'whatsapp-secondary' rgb(255, 255, 255),
+
+'youtube-primary' rgb(237, 56, 51),
+'youtube-secondary' rgb(255, 255, 255);
 
 
 // ==================================================
