@@ -28,4 +28,9 @@
             color: color($color);
         }
     }
+
+    &_#{$color}{
+        @extend .bullets:nth-child(n)::before;
+        color: color($color);
+    }
 }
