@@ -1,0 +1,11 @@
+{
+  "name": "Generics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Kavinci/Generics.git",
+  "author": "Kent Utterback <utterback.kent.a@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^1.10.3"
+  }
+}
