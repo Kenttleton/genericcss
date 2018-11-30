@@ -69,105 +69,21 @@ $typesetting: map-merge($typesetting, $typographical-emphases);
 }
 
 .text {
-    @for $i from 1 through 80 {
-      &_#{$i}px {
-        font-size: #{$i}px;
-
-        @each $text-style, $value in $typesetting {
-            &_#{$text-style} {
-                @extend .text_#{$i}px;
-                @include text-style($text-style);
-
-                @each $color, $value in $colors {
-                    &_#{$color} {
-                        @extend .text_#{$i}px_#{$text-style};
-                        color: $value;
-                    }
-                }
-            }
+    @each $color, $value in $colors {
+        &.#{$color} {
+            color: $value;
         }
-
-        @each $color, $value in $colors {
-            &_#{$color} {
-                @extend .text_#{$i}px;
-                color: $value;
-
-                @each $text-style, $value in $typesetting {
-                    &_#{$text-style} {
-                        @extend .text_#{$i}px_#{$color};
-                        @include text-style($text-style);
-                    }
-                }
-            }
-        }
-      }
     }
 
     @each $text-style, $value in $typesetting {
-        &_#{$text-style} {
+        &.#{$text-style} {
             @include text-style($text-style);
-
-            @for $i from 1 through 80 {
-                &_#{$i}px {
-                  @extend .text_#{$text-style};
-                  font-size: #{$i}px;
-
-                  @each $color, $value in $colors {
-                        &_#{$color} {
-                        @extend .text_#{$text-style}_#{$i}px;
-                        color: $value;
-                        }
-                    }
-                }
-            }
-
-            @each $color, $value in $colors {
-                &_#{$color} {
-                    @extend .text_#{$text-style};
-                    color: $value;
-
-                    @for $i from 1 through 80 {
-                        &_#{$i}px {
-                            @extend .text_#{$text-style}_#{$color};
-                          font-size: #{$i}px;
-                        }
-                    }
-                }
-            }
         }
     }
 
-    @each $color, $value in $colors {
-        &_#{$color} {
-            color: $value;
-
-            @for $i from 1 through 80 {
-                &_#{$i}px {
-                    @extend .text_#{$color};
-                  font-size: #{$i}px;
-
-                  @each $text-style, $value in $typesetting {
-                        &_#{$text-style} {
-                        @extend .text_#{$color}_#{$i}px;
-                        @include text-style($text-style);
-                        }
-                    }
-                }
-            }
-
-            @each $text-style, $value in $typesetting {
-                &_#{$text-style} {
-                    @extend .text_#{$color};
-                    @include text-style($text-style);
-
-                    @for $i from 1 through 80 {
-                        &_#{$i}px {
-                            @extend .text_#{$color}_#{$text-style};
-                            font-size: #{$i}px;
-                        }
-                    }
-                }
-            }
+    @for $i from 1 through 80 {
+        &.pixels-#{$i} {
+          font-size: #{$i}px;
         }
     }
 }

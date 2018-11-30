@@ -62,8 +62,11 @@
     url('/assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype');
 }
 
-$font-primary: 'ProximaNova-Regular';
-$font-primary-bold: 'ProximaNova-Bold';
-$font-secondary: 'Montserrat-Black';
-$font-secondary-bold: 'Montserrat-Bold';
-$font-secondary-light: 'Montserrat-Light';
+$fonts: (
+  primary: 'ProximaNova-Regular',
+  primary-bold: 'ProximaNova-Bold',
+  secondary: 'Montserrat-Black',
+  secondary-bold: 'Montserrat-Bold',
+  secondary-light: 'Montserrat-Light',
+);
+
