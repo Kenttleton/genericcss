@@ -10,6 +10,14 @@
 */
 @import 'colors';
 
+$border-sides: (
+    around: 'around',
+    top: 'top',
+    bottom: 'bottom',
+    left: 'left',
+    right: 'right',
+);
+
 @mixin PopulateStyling($selected-side: 'around') {
     @if($selected-side == 'around'){
         border-style: solid;
@@ -20,13 +28,14 @@
 
     @each $color, $value in $colors {
         &_#{$color} {
-            @extend .border-#{$selected-side};
-
+            @each $selected-side, $value in $border-sides {
+                @extend .border_#{$selected-side};
+            }
             border-color: $value;
 
             @for $i from 1 through 12{
                 &_#{$i}px {
-                    @extend .border-#{$selected-side}-black;
+                    @extend .border_#{$selected-side}_#{$color};
 
                     border-width: #{$i}px;
                 }
@@ -36,24 +45,10 @@
 }
 
 .border {
-    &_around{
-        @include PopulateStyling('around')
-    }
-
-    &_top{
-        @include PopulateStyling('top')
-    }
-
-    &_right{
-        @include PopulateStyling('right')
-    }
-
-    &_bottom{
-        @include PopulateStyling('bottom')
-    }
-
-    &_left{
-        @include PopulateStyling('left')
+    @each $selected-side, $value in $border-sides {
+        &_#{$selected-side}{
+            @include PopulateStyling($value)
+        }
     }
 }
 
