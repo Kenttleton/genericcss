@@ -51,7 +51,7 @@
 
 //Mixins for layout help
 @mixin grid($row-heights: 0, $column-widths: 0, $row-gap: 0, $column-gap: 0){
-  @extend .grid-parent
+  @extend .grid-parent;
   grid-template-columns: $column-widths;
   grid-template-rows: $row-heights;
   grid-row-gap: $row-gap;
@@ -59,7 +59,7 @@
 }
 
 @mixin grid-minmax($row-heights: 0, $column-widths: 0, $row-gap: 0, $column-gap: 0){
-  @extend .grid-parent
+  @extend .grid-parent;
   grid-template-columns: minmax($column-widths);
   grid-template-rows: minmax($row-heights);
   grid-row-gap: $row-gap;
@@ -67,7 +67,7 @@
 }
 
 @mixin grid-repeat($row-heights: 0, $column-widths: 0, $row-gap: 0, $column-gap: 0){
-  @extend .grid-parent
+  @extend .grid-parent;
   grid-template-columns: repeat($column-widths);
   grid-template-rows: repeat($row-heights);
   grid-row-gap: $row-gap;
