@@ -34,7 +34,7 @@ $border-sides: (
             border-color: $value;
 
             @for $i from 1 through 12{
-                &_#{$i}px {
+                &_pixels-#{$i} {
                     @extend .border_#{$selected-side}_#{$color};
 
                     border-width: #{$i}px;
