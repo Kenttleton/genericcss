@@ -65,13 +65,13 @@
 @for $i from 1 through 12 {
   @for $j from 1 through 12 {
     @if ($j > $i) {
-      &.R#{$i}-#{$j} {
+      .R#{$i}-#{$j} {
         grid-row: #{$i} / #{$j+1};
       }
     }
 
     @if ($i == $j) {
-      &.R#{$i} {
+      .R#{$i} {
         grid-row: #{$i};
       }
     }
@@ -81,13 +81,13 @@
 @for $i from 1 through 12 {
   @for $j from 1 through 12 {
     @if ($j > $i) {
-      &.C#{$i}-#{$j} {
+      .C#{$i}-#{$j} {
         grid-column: #{$i} / #{$j+1};
       }
     }
 
     @if ($i == $j) {
-      &.C#{$i} {
+      .C#{$i} {
         grid-column: #{$i};
       }
     }

@@ -7,12 +7,11 @@
 *
 * @styles bullets Bullet Points
 */
-@import 'style-guide/colors';
+@import 'colors';
 
 .bullets {
     &:nth-child(n)::before {
         align-items: center;
-        color: $orange;
         font-family: 'FontAwesome';
         text-align: center;
     }
@@ -23,14 +22,18 @@
         margin-right: 10px;
         font-size: 12px;
 
-        &_#{$color}{
-            @extend .bullets_plus-sign;
-            color: color($color);
+        @each $color, $value in $colors {
+            &_#{$color}{
+                @extend .bullets_plus-sign;
+                color: $value;
+            }
         }
     }
 
-    &_#{$color}{
-        @extend .bullets:nth-child(n)::before;
-        color: color($color);
+    @each $color, $value in $colors {
+        &_#{$color}{
+            @extend .bullets:nth-child(n)::before;
+            color: $value;
+        }
     }
 }

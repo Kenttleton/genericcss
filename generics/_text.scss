@@ -7,100 +7,29 @@
 *
 * @styles text Text
 */
-@import 'style-guide/colors';
+@import 'colors';
 
-.text {
-    @for $i from 1 through 80 {
-      &_#{$i}px {
-        font-size: #{$i}px;
+$vertical-alignment: (
+    middle: 'middle',
+    top: 'top',
+    bottom: 'bottom',
+);
 
-        &_#{$text-style} {
-            @extend .text_#{$i}px;
-            @include text-style($text-style);
+$horizontal-alignment: (
+    center: 'center',
+    right: 'right',
+    left: 'left',
+);
 
-            &_#{$color} {
-                @extend .text_#{$i}px_#{$text-style};
-                color: color($color);
-            }
-        }
+$typographical-emphases: (
+    bold: 'bold',
+    italic: 'italic',
+);
 
-        &_#{$color} {
-            @extend .text_#{$i}px;
-            color: color($color);
+$typesetting: map-merge($vertical-alignment, $horizontal-alignment);
+$typesetting: map-merge($typesetting, $typographical-emphases);
 
-            &_#{$text-style} {
-                @extend .text_#{$i}px_#{$color};
-                @include text-style($text-style);
-            }
-        }
-      }
-    }
-
-    &_#{$text-style} {
-        @include text-style($text-style);
-
-        @for $i from 1 through 80 {
-            &_#{$i}px {
-              @extend .text_#{$text-style};
-              font-size: #{$i}px;
-
-              &_#{$color} {
-                @extend .text_#{$text-style}_#{$i}px;
-                color: color($color);
-            }
-            }
-        }
-
-        &_#{$color} {
-            @extend .text_#{$text-style};
-            color: color($color);
-
-            @for $i from 1 through 80 {
-                &_#{$i}px {
-                    @extend .text_#{$text-style}_#{$color};
-                  font-size: #{$i}px;
-                }
-            }
-        }
-    }
-
-    &_#{$color} {
-        color: color($color);
-
-        @for $i from 1 through 80 {
-            &_#{$i}px {
-                @extend .text_#{$color};
-              font-size: #{$i}px;
-
-              &_#{$text-style} {
-                @extend .text_#{$color}_#{$i}px;
-                @include text-style($text-style);
-                }
-            }
-        }
-
-        &_#{$text-style} {
-            @extend .text_#{$color};
-            @include text-style($text-style);
-
-            @for $i from 1 through 80 {
-                &_#{$i}px {
-                    @extend .text_#{$color}_#{$text-style};
-                    font-size: #{$i}px;
-                }
-            }
-        }
-    }
-}
-
-@mixin text-style($key){
-    @include vertical-align($key);
-    @include horizontal-align($key);
-    @include bold($key);
-    @include italic($key);
-}
-
-@mixin vertical-align($key){
+@mixin align-vertically($key){
     @if($key == 'middle'){
         vertical-align: middle;
     }
@@ -112,7 +41,7 @@
     }
 }
 
-@mixin horizontal-align($key){
+@mixin align-horizontally($key){
     @if($key == 'center'){
         text-align: center;
     }
@@ -124,14 +53,121 @@
     }
 }
 
-@mixin bold($key){
+@mixin typographical-emphasis($key){
     @if($key == 'bold'){
         font-weight: bold;
     }
+    @elseif($key == 'italic'){
+        font-style: italic;
+    }
 }
 
-@mixin italic($key){
-    @if($key == 'italic'){
-        font-style: italic;
+@mixin text-style($key){
+    @include align-vertically($key);
+    @include align-horizontally($key);
+    @include typographical-emphasis($key);
+}
+
+.text {
+    @for $i from 1 through 80 {
+      &_#{$i}px {
+        font-size: #{$i}px;
+
+        @each $text-style, $value in $typesetting {
+            &_#{$text-style} {
+                @extend .text_#{$i}px;
+                @include text-style($text-style);
+
+                @each $color, $value in $colors {
+                    &_#{$color} {
+                        @extend .text_#{$i}px_#{$text-style};
+                        color: $value;
+                    }
+                }
+            }
+        }
+
+        @each $color, $value in $colors {
+            &_#{$color} {
+                @extend .text_#{$i}px;
+                color: $value;
+
+                @each $text-style, $value in $typesetting {
+                    &_#{$text-style} {
+                        @extend .text_#{$i}px_#{$color};
+                        @include text-style($text-style);
+                    }
+                }
+            }
+        }
+      }
+    }
+
+    @each $text-style, $value in $typesetting {
+        &_#{$text-style} {
+            @include text-style($text-style);
+
+            @for $i from 1 through 80 {
+                &_#{$i}px {
+                  @extend .text_#{$text-style};
+                  font-size: #{$i}px;
+
+                  @each $color, $value in $colors {
+                        &_#{$color} {
+                        @extend .text_#{$text-style}_#{$i}px;
+                        color: $value;
+                        }
+                    }
+                }
+            }
+
+            @each $color, $value in $colors {
+                &_#{$color} {
+                    @extend .text_#{$text-style};
+                    color: $value;
+
+                    @for $i from 1 through 80 {
+                        &_#{$i}px {
+                            @extend .text_#{$text-style}_#{$color};
+                          font-size: #{$i}px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @each $color, $value in $colors {
+        &_#{$color} {
+            color: $value;
+
+            @for $i from 1 through 80 {
+                &_#{$i}px {
+                    @extend .text_#{$color};
+                  font-size: #{$i}px;
+
+                  @each $text-style, $value in $typesetting {
+                        &_#{$text-style} {
+                        @extend .text_#{$color}_#{$i}px;
+                        @include text-style($text-style);
+                        }
+                    }
+                }
+            }
+
+            @each $text-style, $value in $typesetting {
+                &_#{$text-style} {
+                    @extend .text_#{$color};
+                    @include text-style($text-style);
+
+                    @for $i from 1 through 80 {
+                        &_#{$i}px {
+                            @extend .text_#{$color}_#{$text-style};
+                            font-size: #{$i}px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

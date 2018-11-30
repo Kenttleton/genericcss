@@ -7,32 +7,38 @@
 *
 * @styles tables Tables
 */
-@import 'style-guide/colors';
+@import 'colors';
 
 .table{
     &.header{
-        &_#{$color}:nth-child(1){
-            background-color: color($color)
+        @each $color, $value in $colors {
+            &_#{$color}:nth-child(1){
+                background-color: $value
+            }
         }
     }
     &.striped{
         &_rows{
-            &-even_#{$color}:nth-child(even){
-                background-color: color($color);
-            }
-            &-odd_#{$color}:nth-child(odd){
-                background-color: color($color);
+            @each $color, $value in $colors {
+                &-even_#{$color}:nth-child(even){
+                    background-color: $value;
+                }
+                &-odd_#{$color}:nth-child(odd){
+                    background-color: $value;
+                }
             }
         }
         &_columns{
-            &-even_#{$color}{
-                tr:nth-child(even){
-                    background-color: color($color);
+            @each $color, $value in $colors {
+                &-even_#{$color}{
+                    tr:nth-child(even){
+                        background-color: $value;
+                    }
                 }
-            }
-            &-odd_#{$color}{
-                tr:nth-child(odd){
-                    background-color: color($color);
+                &-odd_#{$color}{
+                    tr:nth-child(odd){
+                        background-color: $value;
+                    }
                 }
             }
         }

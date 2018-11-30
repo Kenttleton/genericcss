@@ -8,7 +8,32 @@
 *
 * @styles borders Boarder Boxes
 */
-@import 'style-guide/colors';
+@import 'colors';
+
+@mixin PopulateStyling($selected-side: 'around') {
+    @if($selected-side == 'around'){
+        border-style: solid;
+    }
+    @else{
+        border-#{$selected-side}-style: solid;
+    }
+
+    @each $color, $value in $colors {
+        &_#{$color} {
+            @extend .border-#{$selected-side};
+
+            border-color: $value;
+
+            @for $i from 1 through 12{
+                &_#{$i}px {
+                    @extend .border-#{$selected-side}-black;
+
+                    border-width: #{$i}px;
+                }
+            }
+        }
+    }
+}
 
 .border {
     &_around{
@@ -32,26 +57,3 @@
     }
 }
 
-@mixin PopulateStyling($selected-side: 'around') {
-    @if($selected-side == 'around'){
-        border-style: solid;
-    }
-    @else{
-        border-#{$selected-side}-style: solid;
-    }
-
-
-    &_#{$color} {
-        @extend .border-#{$selected-side};
-
-        border-color: color($color);
-
-        @for $i from 1 through 12{
-            &_#{$i}px {
-                @extend .border-#{$selected-side}-black;
-
-                border-width: #{$i}px;
-            }
-        }
-    }
-}
