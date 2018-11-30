@@ -10,14 +10,16 @@
 @import 'colors';
 
 .bullets {
-    &:nth-child(n)::before {
-        align-items: center;
-        font-family: 'FontAwesome';
-        text-align: center;
+    ul {
+        li::before {
+            align-items: center;
+            font-family: 'FontAwesome';
+            text-align: center;
+        }
     }
 
     &_plus-sign{
-        @extend .bullets:nth-child(n)::before;
+        @extend .bullets;
         content: '\f067';
         margin-right: 10px;
         font-size: 12px;
@@ -32,7 +34,7 @@
 
     @each $color, $value in $colors {
         &_#{$color}{
-            @extend .bullets:nth-child(n)::before;
+            @extend .bullets;
             color: $value;
         }
     }

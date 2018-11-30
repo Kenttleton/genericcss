@@ -205,25 +205,11 @@ $colors-social: (
 );
 
 $colors: map-merge($colors-default, $colors-pallette);
+$colors-basic: $colors;
 $colors: map-merge($colors, $colors-special);
-$colors: map-merge($colors, $colors-social);
 $colors: map-merge($colors, $colors-light);
 $colors: map-merge($colors, $colors-dark);
 $colors: map-merge($colors, $colors-active);
 $colors: map-merge($colors, $colors-hover);
 $colors: map-merge($colors, $colors-visited);
-
-// ==================================================
-//      COLOR-FUNCTIONS
-// ==================================================
-
-@function color($color){
-  @if map-has-key($colors, $color){
-    @return #{map-get($colors, $color)};
-  }
-
-  @else {
-    @warn 'Unfortunately, no value could be retrieved from `#{$color}`. ' + 'Please make sure it is defined in `$colors` map.';
-
-    @return '';}
-}
+$colors: map-merge($colors, $colors-social);
