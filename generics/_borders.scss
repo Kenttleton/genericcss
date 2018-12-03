@@ -18,37 +18,32 @@ $border-sides: (
     right: 'right',
 );
 
-@mixin border-style($selected-side: 'around') {
-    @if($selected-side == 'around'){
-        border-style: solid;
-    }
-    @else{
-        border-#{$selected-side}-style: solid;
-    }
-
-    @each $color, $value in $colors {
-        &_#{$color} {
-            @each $selected-side, $value in $border-sides {
-                @extend .border_#{$selected-side};
+.border {
+    @each $selected-side, $value in $border-sides {
+        &_#{$selected-side}{
+            @if($selected-side == 'around'){
+                border-style: solid;
             }
-            border-color: $value;
+            @else{
+                border-#{$selected-side}-style: solid;
+            }
 
-            @for $i from 1 through 12{
-                &_pixels-#{$i} {
-                    @extend .border_#{$selected-side}_#{$color};
+            @each $color, $value in $colors {
+                &_#{$color} {
+                    @each $selected-side, $value in $border-sides {
+                        @extend .border_#{$selected-side};
+                    }
+                    border-color: $value;
 
-                    border-width: #{$i}px;
+                    @for $i from 1 through 12{
+                        &_pixels-#{$i} {
+                            @extend .border_#{$selected-side}_#{$color};
+
+                            border-width: #{$i}px;
+                        }
+                    }
                 }
             }
         }
     }
 }
-
-.border {
-    @each $selected-side, $value in $border-sides {
-        &_#{$selected-side}{
-            @include border-style($value)
-        }
-    }
-}
-
