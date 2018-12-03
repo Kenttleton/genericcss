@@ -5,7 +5,13 @@
   "repository": "https://github.com/Kavinci/Generics.git",
   "author": "Kent Utterback <utterback.kent.a@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "parcel build _styles.scss --out-dir build/ --out-file generics.min.css"
+  },
   "dependencies": {
     "parcel": "^1.10.3"
+  },
+  "devDependencies": {
+    "sass": "^1.15.1"
   }
 }

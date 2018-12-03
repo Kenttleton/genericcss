@@ -33,10 +33,10 @@ $typesetting: map-merge($typesetting, $typographical-emphases);
     @if($key == 'middle'){
         vertical-align: middle;
     }
-    @elseif($key == 'top'){
+    @else if($key == 'top'){
         vertical-align: top;
     }
-    @elseif($key == 'bottom'){
+    @else if($key == 'bottom'){
         vertical-align: bottom;
     }
 }
@@ -45,10 +45,10 @@ $typesetting: map-merge($typesetting, $typographical-emphases);
     @if($key == 'center'){
         text-align: center;
     }
-    @elseif($key == 'right'){
+    @else if($key == 'right'){
         text-align: right;
     }
-    @elseif($key == 'left'){
+    @else if($key == 'left'){
         text-align: left;
     }
 }
@@ -57,7 +57,7 @@ $typesetting: map-merge($typesetting, $typographical-emphases);
     @if($key == 'bold'){
         font-weight: bold;
     }
-    @elseif($key == 'italic'){
+    @else if($key == 'italic'){
         font-style: italic;
     }
 }
