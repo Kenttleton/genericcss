@@ -1,12 +1,23 @@
 {
-  "name": "Generics",
+  "name": "generic-css",
   "version": "1.0.0",
-  "main": "index.js",
+  "keywords": [
+    "css",
+    "sass",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "style": "build/generic-css.bundle.css",
+  "main": "build/generic-css.bundle",
   "repository": "https://github.com/Kavinci/Generics.git",
   "author": "Kent Utterback <utterback.kent.a@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build _styles.scss --out-dir build/ --out-file generics.min.css"
+    "build": "yarn build:css && yarn build:js",
+    "build:css": "parcel build _styles.scss --out-dir build/ --out-file generic-css.bundle.css ",
+    "build:js": "parcel build index.js --out-dir build/ --out-file generic-css.bundle.js "
   },
   "dependencies": {
     "parcel": "^1.10.3"

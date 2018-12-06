@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["exports","testMessage","console","log"],"mappings":";AAAAA,QAAQC,YAAc,WAClBC,QAAQC,IAAI","file":"generic-css.bundle.map","sourceRoot":"..","sourcesContent":["exports.testMessage = () => {\n    console.log(\"generic-css added successfully!\")\n}\n"]}

@@ -11,10 +11,12 @@
 
 .bullets {
     ul {
+        list-style-type: none;
         li::before {
             align-items: center;
             font-family: 'FontAwesome';
             text-align: center;
+
         }
     }
 
@@ -36,6 +38,12 @@
         &_#{$color}{
             @extend .bullets;
             color: $value;
+        }
+    }
+
+    &_none {
+        ul {
+            list-style-type: none;
         }
     }
 }
