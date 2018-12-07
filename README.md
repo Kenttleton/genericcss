@@ -1,7 +1,7 @@
 # Genericcss
 
-Generics is an implementation of style sheets using the theory of [Atomic Design by Brad Frost](http://atomicdesign.bradfrost.com/). I highly recommend his book
- if you have never read it. Generics for the most part falls under the Atom level of the Atomic design theory.
+Genericcss is an implementation of style sheets using the theory of [Atomic Design by Brad Frost](http://atomicdesign.bradfrost.com/). I highly recommend his book
+ if you have never read it. Genericcss for the most part falls under the Atom level of the Atomic design theory.
 
 The development of this implementation started from a need to boil down the styling for use with multiple CMS platforms meaning standardization and generic use
  cases were needed. Combine this with simple language allows for non-developers, for those who have Marketing or management making changes to the copy, who want
