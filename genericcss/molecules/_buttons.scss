@@ -53,23 +53,5 @@
 
 .btn{
     text-decoration: none;
-
-    @each $color, $value in $colors {
-        &_#{$color} {
-            @extend .btn;
-            @include btn($color, $value);
-
-            &_inverted{
-                @extend .btn;
-                @include btn($color, $value, 1);
-            }
-        }
-    }
-
-    @each $cursor, $value in $cursors {
-        &.#{$cursor}:hover {
-            cursor: cursor($value);
-        }
-    }
 }
 

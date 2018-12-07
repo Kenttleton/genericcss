@@ -7,45 +7,29 @@
 *
 * @styles bullets Bullet Points
 */
+
 @import 'colors';
 
-.bullets {
+@mixin bullets($content: '\f111', $color: black) {
     ul {
         list-style-type: none;
         li::before {
             align-items: center;
             font-family: 'FontAwesome';
+            font-size: 0.75em;
             text-align: center;
+            content: $content;
+            margin-right: 0.85rem;
+            color: color($color);
         }
     }
+}
 
-    &_plus-sign, :before{
-        align-items: center;
-        font-family: 'FontAwesome';
-        text-align: center;
-        content: '\f067';
-        margin-right: 10px;
+.bullets {
+    @include bullets();
 
-        li::before {
-            align-items: center;
-            font-family: 'FontAwesome';
-            text-align: center;
-            content: '\f067';
-            margin-right: 10px;
-        }
-        @each $color, $value in $colors {
-            &_#{$color}{
-                @extend .bullets_plus-sign;
-                color: $value;
-            }
-        }
-    }
-
-    @each $color, $value in $colors {
-        &_#{$color}{
-            @extend .bullets;
-            color: $value;
-        }
+    &_plus-sign {
+        @include bullets('\f067');
     }
 
     &_none {
@@ -55,3 +39,4 @@
         }
     }
 }
+

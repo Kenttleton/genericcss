@@ -7,51 +7,10 @@
 *
 * @styles links Links/Hyperlinks
 */
-@import 'colors';
-@import 'cursors';
 
 .link {
-  @each $color, $value in $colors {
-    &_#{$color} {
-      color: $value;
-
-      &_no-underline{
-        @extend .link_#{$color};
-
-        text-decoration: none;
-
-        &:hover {
-          color: map-get($colors-hover, '#{$color}');
-        }
-
-        &:active {
-          color: map-get($colors-active, '#{$color}');
-        }
-
-        &:visited {
-          color: map-get($colors-visited, '#{$color}');
-        }
-      }
-
-      &:hover {
-        color: map-get($colors-hover, '#{$color}');
-      }
-
-      &:active {
-        color: map-get($colors-active, '#{$color}');
-      }
-
-      &:visited {
-        color: map-get($colors-visited, '#{$color}');
-      }
-    }
+  &_no-underline{
+    @extend .link;
+    text-decoration: none;
   }
-
-  @each $cursor, $value in $cursors {
-    &.#{$cursor}:hover {
-        cursor: cursor($value);
-    }
-  }
-}
-
 }

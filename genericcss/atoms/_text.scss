@@ -68,22 +68,15 @@ $typesetting: map-merge($typesetting, $typographical-emphases);
     @include typographical-emphasis($key);
 }
 
-.text {
-    @each $color, $value in $colors {
-        &.#{$color} {
-            color: $value;
-        }
-    }
+@mixin text-color($color: 'black'){
+    color: color($color);
+}
 
+.text {
     @each $text-style, $value in $typesetting {
         &.#{$text-style} {
             @include text-style($text-style);
-        }
-    }
-
-    @for $i from 1 through 80 {
-        &.pixels-#{$i} {
-          font-size: #{$i}px;
+            @include text-color();
         }
     }
 }

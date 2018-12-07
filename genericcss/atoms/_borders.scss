@@ -8,7 +8,6 @@
 *
 * @styles borders Boarder Boxes
 */
-@import 'colors';
 
 $border-sides: (
     around: 'around',
@@ -28,20 +27,11 @@ $border-sides: (
                 border-#{$selected-side}-style: solid;
             }
 
-            @each $color, $value in $colors {
-                &_#{$color} {
-                    @each $selected-side, $value in $border-sides {
-                        @extend .border_#{$selected-side};
-                    }
-                    border-color: $value;
+            @for $i from 1 through 12{
+                &_pixels-#{$i} {
+                    @extend .border_#{$selected-side};
 
-                    @for $i from 1 through 12{
-                        &_pixels-#{$i} {
-                            @extend .border_#{$selected-side}_#{$color};
-
-                            border-width: #{$i}px;
-                        }
-                    }
+                    border-width: #{$i}px;
                 }
             }
         }

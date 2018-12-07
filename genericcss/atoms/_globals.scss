@@ -3,24 +3,33 @@
 
 body {
     font-family: map-get($map: $fonts, $key: 'secondary');
-    margin-left:
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: map-get($map: $fonts, $key: 'primary');
 }
 
-@media (max-width: breakpoint('ms-small-max')){
-    margin-left: margin('ms-small-margin');
-    margin-right: margin('ms-small-margin');
+.hidden {
+    display: none !important;
 }
 
-@media (min-width: breakpoint('ms-medium-min')){
-    margin-left: margin('ms-medium-margin');
-    margin-right: margin('ms-medium-margin');
+@media (max-width: breakpoint('ms-small-max')) {
+    body {
+        padding-left: margin('ms-small-margin');
+        padding-right: margin('ms-small-margin');
+    }
+}
+
+@media (min-width: breakpoint('ms-medium-min')) {
+    body {
+        padding-left: margin('ms-medium-margin');
+        padding-right: margin('ms-medium-margin');
+    }
 }
 
 @media (min-width: breakpoint('ms-large-min')){
-    margin-left: margin('ms-large-margin');
-    margin-right: margin('ms-large-margin');
+    body {
+        padding-left: margin('ms-large-margin');
+        padding-right: margin('ms-large-margin');
+    }
 }

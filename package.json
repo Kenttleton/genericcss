@@ -18,9 +18,9 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn build:css && yarn build:scss && yarn build:js",
-    "build:css": "parcel build _styles.scss --out-dir build/ --out-file genericcss.bundle.css ",
-    "build:scss": "parcel build _styles.scss --out-dir build/ --out-file genericcss.bundle.scss ",
-    "build:js": "parcel build index.js --out-dir build/ --out-file genericcss.bundle.js "
+    "build:css": "parcel build genericcss/_styles.scss --out-dir build/ --out-file genericcss.bundle.css ",
+    "build:scss": "parcel build genericcss/_styles.scss --out-dir build/ --out-file genericcss.bundle.scss ",
+    "build:js": "parcel build genericcss/index.js --out-dir build/ --out-file genericcss.bundle.js "
   },
   "dependencies": {},
   "devDependencies": {

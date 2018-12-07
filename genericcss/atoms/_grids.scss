@@ -10,8 +10,8 @@
 
 .grid {
   &-parent {
-    display: grid;
-    display: -ms-grid;
+    display: grid !important;
+    display: -ms-grid !important;
   }
 }
 
