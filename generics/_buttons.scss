@@ -19,6 +19,7 @@
         height: 65px;
         text-align: center;
         vertical-align: middle;
+        font-family: map-get($fonts, 'primary');
 
         &:hover {
             background-color: map-get($colors-hover, '#{$color}-hover');
@@ -36,6 +37,7 @@
         height: 65px;
         text-align: center;
         vertical-align: middle;
+        font-family: map-get($fonts, 'primary');
 
         &:hover {
             background-color: $value;
