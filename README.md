@@ -1,4 +1,4 @@
-# Generics
+# Genericcss
 
 Generics is an implementation of style sheets using the theory of [Atomic Design by Brad Frost](http://atomicdesign.bradfrost.com/). I highly recommend his book
  if you have never read it. Generics for the most part falls under the Atom level of the Atomic design theory.
