@@ -7,16 +7,15 @@
 *
 * @styles colors-stockup Stockup
 *
-* $black: black;
-* $white: white;
-* $grey: grey;
-* $red: red;
-* $orange: orange;
-* $yellow: yellow;
-* $green: green;
-* $blue: blue;
-* $indigo: indigo;
-* $purple: purple;
+* $black: black !default;
+* $white: white !default;
+* $grey: grey !default;
+* $red: red !default;
+* $orange: orange !default;
+* $yellow: yellow !default;
+* $green: green !default;
+* $blue: blue !default;
+* $purple: purple !default;
 */
 
 // ==================================================
@@ -24,31 +23,15 @@
 // ==================================================
 
 $colors-pallette: (
-  'black':  rgb(0, 0, 0),
-  'white': rgb(255, 255, 255),
-  'grey': rgb(93, 93, 93),
-  'red': rgb(255, 0, 0),
-  'orange': rgb(234, 114, 0),
-  'yellow': rgb(255, 255, 0),
-  'green': rgb(0, 128, 0),
-  'blue': rgb(12, 52, 85),
-  'purple': rgb(128, 0, 128),
-);
-
-// ==================================================
-//      COLOR-DEFAULT
-// ==================================================
-
-$colors-default: (
-  'black':  rgb(0, 0, 0),
-  'white': rgb(255, 255, 255),
-  'grey': rgb(85, 85, 85),
-  'red': rgb(255, 0, 0),
-  'orange': rgb(255, 128, 0),
-  'yellow': rgb(255, 255, 0),
-  'green': rgb(0, 128, 0),
-  'blue': rgb(0, 0, 255),
-  'purple': rgb(128, 0, 128),
+  'black':  rgb(0, 0, 0) !default,
+  'white': rgb(255, 255, 255) !default,
+  'grey': rgb(93, 93, 93) !default,
+  'red': rgb(255, 0, 0) !default,
+  'orange': rgb(234, 114, 0) !default,
+  'yellow': rgb(255, 255, 0) !default,
+  'green': rgb(0, 128, 0) !default,
+  'blue': rgb(12, 52, 85) !default,
+  'purple': rgb(128, 0, 128) !default,
 );
 
 // ==================================================
@@ -56,9 +39,15 @@ $colors-default: (
 // ==================================================
 
 $colors-light: (
-  grey-light: rgb(238, 238, 238),
-  blue-light: lighten(map-get($colors-pallette, 'blue'), 15%),
-  orange-light: lighten(map-get($colors-pallette, 'orange'), 15%),
+  black-light:  lighten(map-get($colors-pallette, 'black'), 15%) !default,
+  white-light: lighten(map-get($colors-pallette, 'white'), 15%) !default,
+  grey-light: lighten(map-get($colors-pallette, 'grey'), 15%) !default,
+  red-light: lighten(map-get($colors-pallette, 'red'), 15%) !default,
+  orange-light: lighten(map-get($colors-pallette, 'orange'), 15%) !default,
+  yellow-light: lighten(map-get($colors-pallette, 'yellow'), 15%) !default,
+  green-light: lighten(map-get($colors-pallette, 'green'), 15%) !default,
+  blue-light: lighten(map-get($colors-pallette, 'blue'), 15%) !default,
+  purple-light: lighten(map-get($colors-pallette, 'purple'), 15%) !default,
 );
 
 // ==================================================
@@ -66,9 +55,15 @@ $colors-light: (
 // ==================================================
 
 $colors-dark: (
-  grey-dark: rgb(62, 62, 62),
-  blue-dark: darken(map-get($colors-pallette, 'blue'), 15%),
-  orange-dark: darken(map-get($colors-pallette, 'orange'), 15%),
+  black-dark:  darken(map-get($colors-pallette, 'black'), 15%) !default,
+  white-dark: darken(map-get($colors-pallette, 'white'), 15%) !default,
+  grey-dark: darken(map-get($colors-pallette, 'grey'), 15%) !default,
+  red-dark: darken(map-get($colors-pallette, 'red'), 15%) !default,
+  orange-dark: darken(map-get($colors-pallette, 'orange'), 15%) !default,
+  yellow-dark: darken(map-get($colors-pallette, 'yellow'), 15%) !default,
+  green-dark: darken(map-get($colors-pallette, 'green'), 15%) !default,
+  blue-dark: darken(map-get($colors-pallette, 'blue'), 15%) !default,
+  purple-dark: darken(map-get($colors-pallette, 'purple'), 15%) !default,
 );
 
 // ==================================================
@@ -76,8 +71,15 @@ $colors-dark: (
 // ==================================================
 
 $colors-hover: (
-  blue-hover: darken(map-get($colors-pallette, 'blue'), 10%),
-  orange-hover: darken(map-get($colors-pallette, 'orange'), 10%),
+  black-hover:  darken(map-get($colors-pallette, 'black'), 10%) !default,
+  white-hover: darken(map-get($colors-pallette, 'white'), 10%) !default,
+  grey-hover: darken(map-get($colors-pallette, 'grey'), 10%) !default,
+  red-hover: darken(map-get($colors-pallette, 'red'), 10%) !default,
+  orange-hover: darken(map-get($colors-pallette, 'orange'), 10%) !default,
+  yellow-hover: darken(map-get($colors-pallette, 'yellow'), 10%) !default,
+  green-hover: darken(map-get($colors-pallette, 'green'), 10%) !default,
+  blue-hover: darken(map-get($colors-pallette, 'blue'), 10%) !default,
+  purple-hover: darken(map-get($colors-pallette, 'purple'), 10%) !default,
 );
 
 // ==================================================
@@ -98,6 +100,18 @@ $colors-visited: ();
 
 $colors-special: (
   yellow-caution: rgb(238, 210, 2),
+  red-danger: rgb(255,35,35),
+  red-stop: rgb(204, 2, 2),
+  orange-biohazard: rgb(255, 115, 4),
+  orange-warning: rgb(255, 103, 0),
+  green-safety: rgb(0, 132, 61),
+  blue-information: rgb(22, 70, 132),
+  black-boundaries: rgb(0, 0, 0),
+  white-boundaries: rgb(255, 255, 255),
+  yellow-boundaries: rgb(245, 211, 2),
+  purple-radiation: rgb(104, 51, 133),
+  yellow-radiation: rgb(253, 222, 17),
+  black-radiation: rgb(0, 0, 0),
 );
 
 // ==================================================
@@ -135,7 +149,7 @@ $colors-social: (
   google-red: rgb(234, 67, 53),
   google-green: rgb(52, 168, 83),
   google-yellow: rgb(251, 188, 5),
-  google-multiple: linear-gradient(135 deg, to right, color(google-blue) 25%, color(google-red) 25% 50%, color(google-green) 50% 75%, color(google-yellow) 75%),
+  google-multiple: linear-gradient(135 deg, to right, rgb(66, 133, 244) 25%, rgb(234, 67, 53) 25% 50%, rgb(52, 168, 83) 50% 75%, rgb(251, 188, 5) 75%),
   google-plus-primary: rgb(219, 68, 55),
   google-plus-secondary: rgb(255, 255, 255),
 
@@ -204,12 +218,15 @@ $colors-social: (
   youtube-secondary: rgb(255, 255, 255),
 );
 
-$colors: map-merge($colors-default, $colors-pallette);
-$colors-basic: $colors;
-$colors: map-merge($colors, $colors-special);
+$colors: $colors-pallette;
 $colors: map-merge($colors, $colors-light);
 $colors: map-merge($colors, $colors-dark);
-$colors: map-merge($colors, $colors-active);
 $colors: map-merge($colors, $colors-hover);
+$colors: map-merge($colors, $colors-active);
 $colors: map-merge($colors, $colors-visited);
+$colors: map-merge($colors, $colors-special);
 $colors: map-merge($colors, $colors-social);
+
+@function color($color){
+  @return map-get($colors, $color)
+}

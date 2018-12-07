@@ -7,22 +7,24 @@
     "responsive",
     "front-end",
     "framework",
-    "web"
+    "web",
+    "bootstrap"
   ],
   "style": "build/generic-css.bundle.css",
   "main": "build/generic-css.bundle",
+  "scss": "build/generic-css.bundle.scss",
   "repository": "https://github.com/Kavinci/Generics.git",
   "author": "Kent Utterback <utterback.kent.a@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:css && yarn build:js",
+    "build": "yarn build:css && yarn build:scss && yarn build:js",
     "build:css": "parcel build _styles.scss --out-dir build/ --out-file generic-css.bundle.css ",
+    "build:scss": "parcel build _styles.scss --out-dir build/ --out-file generic-css.bundle.scss ",
     "build:js": "parcel build index.js --out-dir build/ --out-file generic-css.bundle.js "
   },
-  "dependencies": {
-    "parcel": "^1.10.3"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "sass": "^1.15.1"
+    "parcel": "^1.10.3",
+    "sass": "^1.15.2"
   }
 }
