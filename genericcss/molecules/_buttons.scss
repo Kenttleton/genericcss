@@ -1,0 +1,75 @@
+/**
+* @stylesheet _button.scss Generic Button Definitions
+* @parent styles.styling 4
+*
+* @description
+* Generic definitions for button styling.
+*
+* @styles buttons Buttons
+*/
+
+@import '../atoms/colors';
+@import '../atoms/fonts';
+@import '../atoms/cursors';
+
+@mixin btn($color, $value: white, $inverted: 0, $border: 0) {
+
+    @if($inverted == 0){
+        background-color: $value;
+        max-width: 230px;
+        min-width: 210px;
+        height: 65px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: map-get($fonts, 'primary');
+
+        &:hover {
+            background-color: map-get($colors-hover, '#{$color}-hover');
+        }
+
+        @if($border != 0){
+            border: 2px solid white;
+        }
+    }
+
+    @else{
+        background-color: map-get($colors-hover, '#{$color}-hover');
+        max-width: 230px;
+        min-width: 210px;
+        height: 65px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: map-get($fonts, 'primary');
+
+        &:hover {
+            background-color: $value;
+        }
+
+        @if($border != 0){
+            border: 2px solid white;
+        }
+    }
+}
+
+.btn{
+    text-decoration: none;
+
+    @each $color, $value in $colors {
+        &_#{$color} {
+            @extend .btn;
+            @include btn($color, $value);
+
+            &_inverted{
+                @extend .btn;
+                @include btn($color, $value, 1);
+            }
+        }
+    }
+
+    @each $cursor, $value in $cursors {
+        &.#{$cursor}:hover {
+            cursor: cursor($value);
+        }
+    }
+}
+

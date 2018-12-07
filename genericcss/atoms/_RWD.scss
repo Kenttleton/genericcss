@@ -1,0 +1,38 @@
+/**
+* @parent styles.layout 6
+* @stylesheet _RWD.scss Generic Definitions Responsive Web Design
+*
+* @description
+* RESOLUTION BREAKPOINTS
+* Based on: https://docs.microsoft.com/en-us/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design
+*
+* @styles breakpoints Responsive Web Breakpoints
+*/
+
+/**
+* BREAKPOINTS
+* SMALL - Phones, TVs (due to ppi and distance from screen for average viewer)
+* MEDIUM - Phablets, tablets
+* LARGE - PCs, laptops, Surface Hubs
+*/
+
+$breakpoints: (
+    ms-small-max: 640px,
+    ms-medium-min: 641px,
+    ms-medium-max: 1007px,
+    ms-large-min: 1008px,
+) !default;
+
+$margins: (
+    ms-small-margin: 12px,
+    ms-medium-margin: 24px,
+    ms-large-margin: 24px,
+) !default;
+
+@function breakpoint($breakpoint) {
+    @return map-get($map: $breakpoints, $key: $breakpoint);
+}
+
+@function margin($margin) {
+    @return map-get($map: $margins, $key: $margin);
+}

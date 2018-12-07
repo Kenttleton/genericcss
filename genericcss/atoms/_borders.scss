@@ -1,0 +1,49 @@
+/**
+* @stylesheet _border.scss Generic boarder Definitions
+* @parent styles.styling 1
+*
+* @description
+* Generic definitions for setting boarder lines.
+* This includes full border or lines top, right, bottom, left of box elements.
+*
+* @styles borders Boarder Boxes
+*/
+@import 'colors';
+
+$border-sides: (
+    around: 'around',
+    top: 'top',
+    bottom: 'bottom',
+    left: 'left',
+    right: 'right',
+);
+
+.border {
+    @each $selected-side, $value in $border-sides {
+        &_#{$selected-side}{
+            @if($selected-side == 'around'){
+                border-style: solid;
+            }
+            @else{
+                border-#{$selected-side}-style: solid;
+            }
+
+            @each $color, $value in $colors {
+                &_#{$color} {
+                    @each $selected-side, $value in $border-sides {
+                        @extend .border_#{$selected-side};
+                    }
+                    border-color: $value;
+
+                    @for $i from 1 through 12{
+                        &_pixels-#{$i} {
+                            @extend .border_#{$selected-side}_#{$color};
+
+                            border-width: #{$i}px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

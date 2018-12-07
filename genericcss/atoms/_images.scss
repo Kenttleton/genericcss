@@ -1,0 +1,19 @@
+@import 'RWD';
+
+@media (max-width: breakpoint('ms-small-max')){
+    img {
+        max-width: breakpoint('ms-small-max');
+    }
+}
+
+@media (min-width: breakpoint('ms-medium-min')){
+    img {
+        max-width: breakpoint('ms-medium-max');
+    }
+}
+
+@media (min-width: breakpoint('ms-large-min')){
+    img {
+
+    }
+}

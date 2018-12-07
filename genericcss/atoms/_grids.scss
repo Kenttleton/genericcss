@@ -1,0 +1,90 @@
+/**
+* @stylesheet _grid.scss Generic Grid Definitions
+* @parent styles.layout 0
+*
+* @description
+* Generic definitions for setting grid parents and children.
+*
+* @styles grids Grid Layouts
+*/
+
+.grid {
+  &-parent {
+    display: grid;
+    display: -ms-grid;
+  }
+}
+
+//Child Row placement
+@for $i from 1 through 12 {
+  @for $j from 1 through 12 {
+    @if ($j > $i) {
+      .R#{$i}-#{$j} {
+        grid-row: #{$i} / #{$j+1};
+      }
+    }
+
+    @if ($i == $j) {
+      .R#{$i} {
+        grid-row: #{$i};
+      }
+    }
+  }
+}
+
+//Child Column placement
+@for $i from 1 through 12 {
+  @for $j from 1 through 12 {
+    @if ($j > $i) {
+      .C#{$i}-#{$j} {
+        grid-column: #{$i} / #{$j+1};
+      }
+    }
+
+    @if ($i == $j) {
+      .C#{$i} {
+        grid-column: #{$i};
+      }
+    }
+  }
+}
+
+//Mixins for layout help
+@mixin grid($row-heights: 0, $column-widths: 0, $row-gap: 0, $column-gap: 0){
+  @extend .grid-parent;
+  grid-template-columns: $column-widths;
+  grid-template-rows: $row-heights;
+  grid-row-gap: $row-gap;
+  grid-column-gap: $column-gap;
+}
+
+@mixin grid-minmax($row-heights: 0, $column-widths: 0, $row-gap: 0, $column-gap: 0){
+  @extend .grid-parent;
+  grid-template-columns: minmax($column-widths);
+  grid-template-rows: minmax($row-heights);
+  grid-row-gap: $row-gap;
+  grid-column-gap: $column-gap;
+}
+
+@mixin grid-repeat($row-heights: 0, $column-widths: 0, $row-gap: 0, $column-gap: 0){
+  @extend .grid-parent;
+  grid-template-columns: repeat($column-widths);
+  grid-template-rows: repeat($row-heights);
+  grid-row-gap: $row-gap;
+  grid-column-gap: $column-gap;
+}
+
+@mixin row($columnStart: 1, $columnEnd: 1){
+  grid-column-start: $columnStart;
+  grid-column-end: $columnEnd;
+}
+
+@mixin col($rowStart: 1, $rowEnd: 1){
+  grid-row-start: $rowStart;
+  grid-row-end: $rowEnd;
+}
+
+@mixin area($columnStart: 1, $columnEnd: 1, $rowStart: 1, $rowEnd: 1){
+  @include row($columnStart, $columnEnd);
+  @include col($rowStart, $rowEnd);
+}

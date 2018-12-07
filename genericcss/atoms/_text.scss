@@ -1,0 +1,89 @@
+/**
+* @parent styles.styling 6
+* @stylesheet _text.scss Generic Definitions for Text Elements
+*
+* @description
+* Generic definitions for styling text.
+*
+* @styles text Text
+*/
+@import 'colors';
+
+$vertical-alignment: (
+    middle: 'middle',
+    top: 'top',
+    bottom: 'bottom',
+);
+
+$horizontal-alignment: (
+    center: 'center',
+    right: 'right',
+    left: 'left',
+);
+
+$typographical-emphases: (
+    bold: 'bold',
+    italic: 'italic',
+);
+
+$typesetting: map-merge($vertical-alignment, $horizontal-alignment);
+$typesetting: map-merge($typesetting, $typographical-emphases);
+
+@mixin align-vertically($key){
+    @if($key == 'middle'){
+        vertical-align: middle;
+    }
+    @else if($key == 'top'){
+        vertical-align: top;
+    }
+    @else if($key == 'bottom'){
+        vertical-align: bottom;
+    }
+}
+
+@mixin align-horizontally($key){
+    @if($key == 'center'){
+        text-align: center;
+    }
+    @else if($key == 'right'){
+        text-align: right;
+    }
+    @else if($key == 'left'){
+        text-align: left;
+    }
+}
+
+@mixin typographical-emphasis($key){
+    @if($key == 'bold'){
+        font-weight: bold;
+    }
+    @else if($key == 'italic'){
+        font-style: italic;
+    }
+}
+
+@mixin text-style($key){
+    @include align-vertically($key);
+    @include align-horizontally($key);
+    @include typographical-emphasis($key);
+}
+
+.text {
+    @each $color, $value in $colors {
+        &.#{$color} {
+            color: $value;
+        }
+    }
+
+    @each $text-style, $value in $typesetting {
+        &.#{$text-style} {
+            @include text-style($text-style);
+        }
+    }
+
+    @for $i from 1 through 80 {
+        &.pixels-#{$i} {
+          font-size: #{$i}px;
+        }
+    }
+}
