@@ -9,6 +9,8 @@
 * @styles borders Boarder Boxes
 */
 
+@import 'colors';
+
 $border-sides: (
     around: 'around',
     top: 'top',
@@ -16,6 +18,10 @@ $border-sides: (
     left: 'left',
     right: 'right',
 );
+
+@mixin border-color($color: 'black'){
+    border-color: color($color);
+}
 
 .border {
     @each $selected-side, $value in $border-sides {
@@ -30,6 +36,7 @@ $border-sides: (
             @for $i from 1 through 12{
                 &_pixels-#{$i} {
                     @extend .border_#{$selected-side};
+                    @include border-color();
 
                     border-width: #{$i}px;
                 }

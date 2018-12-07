@@ -8,6 +8,13 @@
 * @styles tables Tables
 */
 
-.table{
+@import 'fonts';
+@import 'colors';
 
+.table{
+    &-header{
+        @include font('primary-bold');
+        background-color: color();
+        color: color();
+    }
 }

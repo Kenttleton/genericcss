@@ -7,8 +7,30 @@
 *
 * @styles links Links/Hyperlinks
 */
+@import 'color';
+
+@mixin link-color($color: 'link'){
+  &:link{
+    color: color($color);
+  }
+  &:hover{
+    color: color('#{$color}-hover');
+  }
+  &:visited{
+    color: color('#{$color}-visited');
+  }
+  &:active{
+    color: color('#{$color}-active');
+  }
+}
+
+a {
+  @include link-color();
+}
 
 .link {
+  @include link-color();
+
   &_no-underline{
     @extend .link;
     text-decoration: none;

@@ -96,6 +96,13 @@ $colors-active: () !default;
 
 $colors-visited: () !default;
 
+$colors-links: (
+  link: rgb(24,154,211),
+  link-hover: rgb(80, 24, 211),
+  link-visited: rgb(24, 61, 211),
+  link-active: rgb( 	211, 24, 155),
+) !default;
+
 // ==================================================
 //      COLOR-SPECIAL
 // ==================================================
@@ -226,9 +233,10 @@ $colors: map-merge($colors, $colors-dark);
 $colors: map-merge($colors, $colors-hover);
 $colors: map-merge($colors, $colors-active);
 $colors: map-merge($colors, $colors-visited);
+$colors: map-merge($colors, $colors-links);
 $colors: map-merge($colors, $colors-special);
 $colors: map-merge($colors, $colors-social);
 
-@function color($color){
+@function color($color: 'white'){
   @return map-get($colors, $color)
 }

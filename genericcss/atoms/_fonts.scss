@@ -45,3 +45,10 @@ $fonts: (
   secondary-light: 'Roboto-Light',
 ) !default;
 
+@function font($type){
+  @return map-get($map: $fonts, $key: $type);
+}
+
+@mixin font($type: font('secondary')){
+  font: font($type);
+}

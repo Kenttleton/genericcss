@@ -43,14 +43,14 @@ $cursors: (
     nwse-resize: 'nwse-resize',
 ) !default;
 
+@function cursor($type){
+    @return map-get($map: $cursors, $key: $type);
+}
+
 .cursor {
     @each $cursor-type, $value in $cursors {
         &_#{$cursor-type} {
-            cursor: $value;
+            cursor: cursor($cursor-type);
         }
     }
-}
-
-@function cursor($type){
-    @return map-get($map: $cursors, $key: $type)
 }
