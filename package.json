@@ -10,17 +10,17 @@
     "web",
     "bootstrap"
   ],
-  "style": "build/generic-css.bundle.css",
-  "main": "build/generic-css.bundle",
-  "scss": "build/generic-css.bundle.scss",
-  "repository": "https://github.com/Kavinci/Generics.git",
+  "style": "build/genericcss.bundle.css",
+  "main": "build/genericcss.bundle",
+  "scss": "build/genericcss.bundle.scss",
+  "repository": "https://github.com/Kavinci/genericcss.git",
   "author": "Kent Utterback <utterback.kent.a@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "yarn build:css && yarn build:scss && yarn build:js",
-    "build:css": "parcel build _styles.scss --out-dir build/ --out-file generic-css.bundle.css ",
-    "build:scss": "parcel build _styles.scss --out-dir build/ --out-file generic-css.bundle.scss ",
-    "build:js": "parcel build index.js --out-dir build/ --out-file generic-css.bundle.js "
+    "build:css": "parcel build _styles.scss --out-dir build/ --out-file genericcss.bundle.css ",
+    "build:scss": "parcel build _styles.scss --out-dir build/ --out-file genericcss.bundle.scss ",
+    "build:js": "parcel build index.js --out-dir build/ --out-file genericcss.bundle.js "
   },
   "dependencies": {},
   "devDependencies": {
