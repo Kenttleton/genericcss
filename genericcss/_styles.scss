@@ -4,7 +4,6 @@
 @import 'atoms/colors';
 @import 'atoms/cursors';
 @import 'atoms/fonts';
-@import 'atoms/globals';
 @import 'atoms/grids';
 @import 'atoms/images';
 @import 'atoms/links';
@@ -16,7 +15,10 @@
 
 @import 'molecules/buttons';
 
+@import 'organisms/body';
+@import 'organisms/footer';
 @import 'organisms/forms';
-@import 'organisms/navs';
+@import 'organisms/header';
+@import 'organisms/sidebars';
 
 @import 'templates/layouts';
