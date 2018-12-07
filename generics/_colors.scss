@@ -7,15 +7,17 @@
 *
 * @styles colors-stockup Stockup
 *
-* $black: black !default;
-* $white: white !default;
-* $grey: grey !default;
-* $red: red !default;
-* $orange: orange !default;
-* $yellow: yellow !default;
-* $green: green !default;
-* $blue: blue !default;
-* $purple: purple !default;
+* $colors-pallette: (
+*  'black':  rgb(0, 0, 0) ,
+*  'white': rgb(255, 255, 255) ,
+*  'grey': rgb(93, 93, 93) ,
+*  'red': rgb(255, 0, 0) ,
+*  'orange': rgb(234, 114, 0) ,
+*  'yellow': rgb(255, 255, 0) ,
+*  'green': rgb(0, 128, 0) ,
+*  'blue': rgb(12, 52, 85) ,
+*  'purple': rgb(128, 0, 128) ,
+*  );
 */
 
 // ==================================================
@@ -23,76 +25,76 @@
 // ==================================================
 
 $colors-pallette: (
-  'black':  rgb(0, 0, 0) !default,
-  'white': rgb(255, 255, 255) !default,
-  'grey': rgb(93, 93, 93) !default,
-  'red': rgb(255, 0, 0) !default,
-  'orange': rgb(234, 114, 0) !default,
-  'yellow': rgb(255, 255, 0) !default,
-  'green': rgb(0, 128, 0) !default,
-  'blue': rgb(12, 52, 85) !default,
-  'purple': rgb(128, 0, 128) !default,
-);
+  'black':  rgb(0, 0, 0),
+  'white': rgb(255, 255, 255),
+  'grey': rgb(93, 93, 93),
+  'red': rgb(255, 0, 0),
+  'orange': rgb(234, 114, 0),
+  'yellow': rgb(255, 255, 0),
+  'green': rgb(0, 128, 0),
+  'blue': rgb(12, 52, 85),
+  'purple': rgb(128, 0, 128),
+) !default;
 
 // ==================================================
 //      COLOR-LIGHT
 // ==================================================
 
 $colors-light: (
-  black-light:  lighten(map-get($colors-pallette, 'black'), 15%) !default,
-  white-light: lighten(map-get($colors-pallette, 'white'), 15%) !default,
-  grey-light: lighten(map-get($colors-pallette, 'grey'), 15%) !default,
-  red-light: lighten(map-get($colors-pallette, 'red'), 15%) !default,
-  orange-light: lighten(map-get($colors-pallette, 'orange'), 15%) !default,
-  yellow-light: lighten(map-get($colors-pallette, 'yellow'), 15%) !default,
-  green-light: lighten(map-get($colors-pallette, 'green'), 15%) !default,
-  blue-light: lighten(map-get($colors-pallette, 'blue'), 15%) !default,
-  purple-light: lighten(map-get($colors-pallette, 'purple'), 15%) !default,
-);
+  black-light:  lighten(map-get($colors-pallette, 'black'), 15%),
+  white-light: lighten(map-get($colors-pallette, 'white'), 15%),
+  grey-light: lighten(map-get($colors-pallette, 'grey'), 15%),
+  red-light: lighten(map-get($colors-pallette, 'red'), 15%),
+  orange-light: lighten(map-get($colors-pallette, 'orange'), 15%),
+  yellow-light: lighten(map-get($colors-pallette, 'yellow'), 15%),
+  green-light: lighten(map-get($colors-pallette, 'green'), 15%),
+  blue-light: lighten(map-get($colors-pallette, 'blue'), 15%),
+  purple-light: lighten(map-get($colors-pallette, 'purple'), 15%),
+) !default;
 
 // ==================================================
 //      COLOR-DARK
 // ==================================================
 
 $colors-dark: (
-  black-dark:  darken(map-get($colors-pallette, 'black'), 15%) !default,
-  white-dark: darken(map-get($colors-pallette, 'white'), 15%) !default,
-  grey-dark: darken(map-get($colors-pallette, 'grey'), 15%) !default,
-  red-dark: darken(map-get($colors-pallette, 'red'), 15%) !default,
-  orange-dark: darken(map-get($colors-pallette, 'orange'), 15%) !default,
-  yellow-dark: darken(map-get($colors-pallette, 'yellow'), 15%) !default,
-  green-dark: darken(map-get($colors-pallette, 'green'), 15%) !default,
-  blue-dark: darken(map-get($colors-pallette, 'blue'), 15%) !default,
-  purple-dark: darken(map-get($colors-pallette, 'purple'), 15%) !default,
-);
+  black-dark:  darken(map-get($colors-pallette, 'black'), 15%),
+  white-dark: darken(map-get($colors-pallette, 'white'), 15%),
+  grey-dark: darken(map-get($colors-pallette, 'grey'), 15%),
+  red-dark: darken(map-get($colors-pallette, 'red'), 15%),
+  orange-dark: darken(map-get($colors-pallette, 'orange'), 15%),
+  yellow-dark: darken(map-get($colors-pallette, 'yellow'), 15%),
+  green-dark: darken(map-get($colors-pallette, 'green'), 15%),
+  blue-dark: darken(map-get($colors-pallette, 'blue'), 15%),
+  purple-dark: darken(map-get($colors-pallette, 'purple'), 15%),
+) !default;
 
 // ==================================================
 //      COLORS-HOVER
 // ==================================================
 
 $colors-hover: (
-  black-hover:  darken(map-get($colors-pallette, 'black'), 10%) !default,
-  white-hover: darken(map-get($colors-pallette, 'white'), 10%) !default,
-  grey-hover: darken(map-get($colors-pallette, 'grey'), 10%) !default,
-  red-hover: darken(map-get($colors-pallette, 'red'), 10%) !default,
-  orange-hover: darken(map-get($colors-pallette, 'orange'), 10%) !default,
-  yellow-hover: darken(map-get($colors-pallette, 'yellow'), 10%) !default,
-  green-hover: darken(map-get($colors-pallette, 'green'), 10%) !default,
-  blue-hover: darken(map-get($colors-pallette, 'blue'), 10%) !default,
-  purple-hover: darken(map-get($colors-pallette, 'purple'), 10%) !default,
-);
+  black-hover:  darken(map-get($colors-pallette, 'black'), 10%),
+  white-hover: darken(map-get($colors-pallette, 'white'), 10%),
+  grey-hover: darken(map-get($colors-pallette, 'grey'), 10%),
+  red-hover: darken(map-get($colors-pallette, 'red'), 10%),
+  orange-hover: darken(map-get($colors-pallette, 'orange'), 10%),
+  yellow-hover: darken(map-get($colors-pallette, 'yellow'), 10%),
+  green-hover: darken(map-get($colors-pallette, 'green'), 10%),
+  blue-hover: darken(map-get($colors-pallette, 'blue'), 10%),
+  purple-hover: darken(map-get($colors-pallette, 'purple'), 10%),
+) !default;
 
 // ==================================================
 //      COLORS-ACTIVE
 // ==================================================
 
-$colors-active: ();
+$colors-active: () !default;
 
 // ==================================================
 //      COLORS-VISITED
 // ==================================================
 
-$colors-visited: ();
+$colors-visited: () !default;
 
 // ==================================================
 //      COLOR-SPECIAL
@@ -112,7 +114,7 @@ $colors-special: (
   purple-radiation: rgb(104, 51, 133),
   yellow-radiation: rgb(253, 222, 17),
   black-radiation: rgb(0, 0, 0),
-);
+) !default;
 
 // ==================================================
 //      COLOR-SOCIAL -> https://www.lockedownseo.com/social-media-colors/
@@ -216,7 +218,7 @@ $colors-social: (
 
   youtube-primary: rgb(237, 56, 51),
   youtube-secondary: rgb(255, 255, 255),
-);
+) !default;
 
 $colors: $colors-pallette;
 $colors: map-merge($colors, $colors-light);

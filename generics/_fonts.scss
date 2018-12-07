@@ -3,70 +3,45 @@
 // ==================================================
 
 @font-face {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'IBMPlexSans-Regular';
   font-style: normal;
   font-weight: normal;
-  src: url('/assets/fonts/ProximaNova-Regular.eot');
-  src: url('/assets/fonts/ProximaNova-Regular.woff2') format('woff2'),
-    url('/assets/fonts/ProximaNova-Regular.woff') format('woff'),
-    url('/assets/fonts/ProximaNova-Regular.ttf') format('truetype'),
-    url('/assets/fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'),
-    url('/assets/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
+  src: url('/assets/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'IBMPlexSans-Bold';
   font-style: normal;
   font-weight: normal;
-  src: url('/assets/fonts/ProximaNova-Bold.eot');
-  src: url('/assets/fonts/ProximaNova-Bold.woff2') format('woff2'),
-    url('/assets/fonts/ProximaNova-Bold.woff') format('woff'),
-    url('/assets/fonts/ProximaNova-Bold.ttf') format('truetype'),
-    url('/assets/fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg'),
-    url('/assets/fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype');
+  src: url('/assets/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat-Black';
+  font-family: 'Roboto-Regular';
   font-style: normal;
   font-weight: normal;
-  src: url('/assets/fonts/Montserrat-Black.eot');
-  src: url('/assets/fonts/Montserrat-Black.woff2') format('woff2'),
-    url('/assets/fonts/Montserrat-Black.woff') format('woff'),
-    url('/assets/fonts/Montserrat-Black.ttf') format('truetype'),
-    url('/assets/fonts/Montserrat-Black.svg#Montserrat-Black') format('svg'),
-    url('/assets/fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype');
+  src: url('/assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat-Light';
+  font-family: 'Roboto-Bold';
   font-style: normal;
   font-weight: normal;
-  src: url('/assets/fonts/Montserrat-Light.eot');
-  src: url('/assets/fonts/Montserrat-Light.woff2') format('woff2'),
-    url('/assets/fonts/Montserrat-Light.woff') format('woff'),
-    url('/assets/fonts/Montserrat-Light.ttf') format('truetype'),
-    url('/assets/fonts/Montserrat-Light.svg#Montserrat-Light') format('svg'),
-    url('/assets/fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype');
+  src: url('/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat-Bold';
+  font-family: 'Roboto-Light';
   font-style: normal;
   font-weight: normal;
-  src: url('/assets/fonts/Montserrat-Bold.eot');
-  src: url('/assets/fonts/Montserrat-Bold.woff2') format('woff2'),
-    url('/assets/fonts/Montserrat-Bold.woff') format('woff'),
-    url('/assets/fonts/Montserrat-Bold.ttf') format('truetype'),
-    url('/assets/fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg'),
-    url('/assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype');
+  src: url('/assets/fonts/Roboto/Roboto-Light.ttf') format('truetype');
 }
 
 $fonts: (
-  primary: 'ProximaNova-Regular',
-  primary-bold: 'ProximaNova-Bold',
-  secondary: 'Montserrat-Black',
-  secondary-bold: 'Montserrat-Bold',
-  secondary-light: 'Montserrat-Light',
-);
+  primary: 'IBMPlexSans-Regular',
+  primary-bold: 'IBMPlexSans-Bold',
+  secondary: 'Roboto-Regular',
+  secondary-bold: 'Roboto-Bold',
+  secondary-light: 'Roboto-Light',
+) !default;
 
