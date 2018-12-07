@@ -1,0 +1,23 @@
+@import '../atoms/grids';
+@import '../atoms/RWD';
+
+@mixin sidebar($location: 'left'){
+
+}
+@media (max-width: breakpoint('ms-small-max')) {
+    .sidebar{
+        padding: margin('ms-small-margin') #{margin('ms-small-margin')/2};
+    }
+}
+
+@media (min-width: breakpoint('ms-medium-min')) {
+    .sidebar{
+        padding: margin('ms-medium-margin') #{margin('ms-medium-margin')/2};
+    }
+}
+
+@media (min-width: breakpoint('ms-large-min')){
+    .sidebar{
+        padding: margin('ms-large-margin') #{margin('ms-large-margin')/2};
+    }
+}

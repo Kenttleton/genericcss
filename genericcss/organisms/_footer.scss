@@ -1,0 +1,24 @@
+@import '../atoms/grids';
+@import '../atoms/RWD';
+
+@mixin footer(){
+
+}
+
+@media (max-width: breakpoint('ms-small-max')) {
+    .footer{
+        padding: margin('ms-small-margin') #{margin('ms-small-margin')/2};
+    }
+}
+
+@media (min-width: breakpoint('ms-medium-min')) {
+    .footer{
+        padding: margin('ms-medium-margin') #{margin('ms-medium-margin')/2};
+    }
+}
+
+@media (min-width: breakpoint('ms-large-min')){
+    .footer{
+        padding: margin('ms-large-margin') #{margin('ms-large-margin')/2};
+    }
+}

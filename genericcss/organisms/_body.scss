@@ -1,0 +1,37 @@
+@import '../atoms/grids';
+@import '../atoms/RWD';
+@import '../atoms/fonts';
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: font('secondary');
+}
+
+.hidden {
+    display: none !important;
+}
+
+@mixin body(){
+    @extend .grid-parent;
+    font-family: font('primary');
+}
+
+@media (max-width: breakpoint('ms-small-max')) {
+    body{
+        padding: margin('ms-small-margin') #{margin('ms-small-margin')/2};
+        max-width: breakpoint('ms-small-max');
+    }
+}
+
+@media (min-width: breakpoint('ms-medium-min')) {
+    body{
+        padding: margin('ms-medium-margin') #{margin('ms-medium-margin')/2};
+        max-width: breakpoint('ms-medium-max');
+    }
+}
+
+@media (min-width: breakpoint('ms-large-min')){
+    body{
+        padding: margin('ms-large-margin') #{margin('ms-large-margin')/2};
+        max-width: breakpoint('ms-large-max');
+    }
+}

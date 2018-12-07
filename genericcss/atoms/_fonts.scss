@@ -38,17 +38,17 @@
 }
 
 $fonts: (
-  primary: 'IBMPlexSans-Regular',
-  primary-bold: 'IBMPlexSans-Bold',
-  secondary: 'Roboto-Regular',
-  secondary-bold: 'Roboto-Bold',
-  secondary-light: 'Roboto-Light',
+  primary: 'Roboto-Regular',
+  primary-bold: 'Roboto-Bold',
+  primary-light: 'Roboto-Light',
+  secondary: 'IBMPlexSans-Regular',
+  secondary-bold: 'IBMPlexSans-Bold',
 ) !default;
 
 @function font($type){
   @return map-get($map: $fonts, $key: $type);
 }
 
-@mixin font($type: font('secondary')){
+@mixin font($type: font('primary')){
   font: font($type);
 }

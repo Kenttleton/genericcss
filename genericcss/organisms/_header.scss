@@ -1,0 +1,60 @@
+@import '../atoms/grids';
+@import '../atoms/RWD';
+@import '../atoms/text';
+@import '../atoms/links';
+
+@mixin header($num-cols: 12){
+    display: inline-grid !important;
+    display: -ms-inline-grid !important;
+    @include align-vertically('middle');
+    grid-row: 1;
+    grid-column: span $num-cols;
+    overflow: hidden;
+    background-color: color('primary');
+    text-decoration: none;
+}
+
+@mixin header-vertical($num-cols: 12){
+    @extend .grid-parent;
+    @include align-vertically('middle');
+    grid-row: 1;
+    grid-column: span $num-cols;
+    overflow: hidden;
+    background-color: color('primary');
+    text-decoration: none;
+}
+
+@media (max-width: breakpoint('ms-small-max')) {
+    .header{
+        @include header(7);
+        padding: margin('ms-small-margin') #{margin('ms-small-margin')/2};
+
+        & a:hover{
+            background-color: color('secondary');
+        }
+    }
+}
+
+@media (min-width: breakpoint('ms-medium-min')) {
+    .header{
+        @include header();
+        padding: margin('ms-medium-margin') #{margin('ms-medium-margin')/2};
+
+        & a:hover{
+            background-color: color('secondary');
+        }
+    }
+}
+
+@media (min-width: breakpoint('ms-large-min')){
+    .header{
+        @include header();
+        padding: margin('ms-large-margin') #{margin('ms-large-margin')/2};
+
+        & a:hover{
+            background-color: color('secondary');
+        }
+    }
+}
+
+

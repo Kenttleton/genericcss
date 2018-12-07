@@ -13,7 +13,7 @@
 
 .table{
     &-header{
-        @include font('primary-bold');
+        @include font('secondary-bold');
         background-color: color();
         color: color();
     }
