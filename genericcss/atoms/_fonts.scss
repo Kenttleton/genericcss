@@ -37,12 +37,51 @@
   src: url('../assets/fonts/Roboto/Roboto-Light.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot");
+  src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2") format("woff2"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff") format("woff"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf") format("truetype"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot");
+  src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2") format("woff2"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff") format("woff"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf") format("truetype"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Solid';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot");
+  src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2") format("woff2"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff") format("woff"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf") format("truetype"),
+  url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
 $fonts: (
   primary: 'Roboto-Regular',
   primary-bold: 'Roboto-Bold',
   primary-light: 'Roboto-Light',
   secondary: 'IBMPlexSans-Regular',
   secondary-bold: 'IBMPlexSans-Bold',
+  fontawesome-brands: 'Font Awesome 5 Brands',
+  fontawesome-regular: 'Font Awesome 5 Regular',
+  fontawesome-solid: 'Font Awesome 5 Solid',
 ) !default;
 
 @function font($type){

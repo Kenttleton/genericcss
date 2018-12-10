@@ -1,6 +1,6 @@
 {
   "name": "genericcss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "css",
     "sass",
@@ -24,6 +24,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.0",
     "parcel": "^1.10.3",
     "sass": "^1.15.2"
   }

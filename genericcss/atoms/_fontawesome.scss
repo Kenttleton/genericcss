@@ -1,0 +1,274 @@
+@import 'fonts';
+@import 'animations';
+
+.fab {
+    font: font('fontawesome-brands');
+}
+
+.far {
+    font: font('fontawesome-regular');
+}
+
+.fas {
+    font: font('fontawesome-solid');
+}
+
+.fa-spin {
+    animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+    animation: fa-spin 1s infinite steps(8);
+}
+
+.fa-ul {
+    list-style-type: none;
+    margin-left: 2em * 5/4;
+    padding-left: 0;
+
+    > li { position: relative; }
+}
+
+.fa-li {
+    left: 2em;
+    position: absolute;
+    text-align: center;
+    width: 2em;
+    line-height: inherit;
+}
+
+.fa-rotate-90  { @include fa-icon-rotate(90deg, 1);  }
+.fa-rotate-180 { @include fa-icon-rotate(180deg, 2); }
+.fa-rotate-270 { @include fa-icon-rotate(270deg, 3); }
+
+.fa-flip-horizontal { @include fa-icon-flip(-1, 1, 0); }
+.fa-flip-vertical   { @include fa-icon-flip(1, -1, 2); }
+.fa-flip-horizontal.fa-flip-vertical { @include fa-icon-flip(-1, -1, 2); }
+
+:root {
+    .fa-rotate-90,
+    .fa-rotate-180,
+    .fa-rotate-270,
+    .fa-flip-horizontal,
+    .fa-flip-vertical {
+      filter: none;
+    }
+}
+
+// fab
+.fa-angular:before {
+    content: '\f420';
+}
+
+.fa-aws:before {
+    content: '\f375';
+}
+
+.fa-bitbucket:before {
+    content: '\f171';
+}
+
+.fa-codepen:before {
+    content: '\f1cb';
+}
+
+.fa-css3:before {
+    content: '\f13c';
+}
+
+.fa-css3-alt:before {
+    content: '\f38b';
+}
+
+.fa-discord:before {
+    content: '\f392';
+}
+
+.fa-docker:before {
+    content: '\f395';
+}
+
+.fa-facebook:before {
+    content: '\f09a';
+}
+
+.fa-facebook-f:before {
+    content: '\f39e';
+}
+
+.fa-font-awesome:before {
+    content: '\f2b4';
+}
+
+.fa-font-awesome-alt:before {
+    content: '\f35c';
+}
+
+.fa-font-awesome-flag:before {
+    content: '\f425';
+}
+
+.fa-get-pocket:before {
+    content: '\f265';
+}
+
+.fa-git:before {
+    content: '\f1d3';
+}
+
+.fa-git-square:before {
+    content: '\f1d2';
+}
+
+.fa-github:before {
+    content: '\f09b';
+}
+
+.fa-gitlab:before {
+    content: '\f296';
+}
+
+.fa-google:before {
+    content: '\f1a0';
+}
+
+.fa-google-plus:before {
+    content: '\f2b3';
+}
+
+.fa-google-plus-g:before {
+    content: '\f0d5';
+}
+
+.fa-google-plus-square:before {
+    content: '\f0d4';
+}
+
+.fa-hacker-news:before {
+    content: '\f1d4';
+}
+
+.fa-html5:before {
+    content: '\f13b';
+}
+
+.fa-instagram:before {
+    content: '\f16d';
+}
+
+.fa-java:before {
+    content: '\f4e4';
+}
+
+.fa-js:before {
+    content: '\f3b8';
+}
+
+.fa-less:before {
+    content: '\f41d';
+}
+
+.fa-linkedin:before {
+    content: '\f08c';
+}
+
+.fa-linkedin-in:before {
+    content: '\f0e1';
+}
+
+.fa-linode:before {
+    content: '\f2b8';
+}
+
+.fa-medium:before {
+    content: '\f23a';
+}
+
+.fa-medium-m:before {
+    content: '\f3c7';
+}
+
+.fa-node:before {
+    content: '\f419';
+}
+
+.fa-node-js:before {
+    content: '\f3d3';
+}
+
+.fa-npm:before {
+    content: '\f3d4';
+}
+
+.fa-pinterest:before {
+    content: '\f0d2';
+}
+
+.fa-php:before {
+    content: '\f457';
+}
+
+.fa-pinterest-p:before {
+    content: '\f231';
+}
+
+.fa-python:before {
+    content: '\f3e2';
+}
+
+.fa-react:before {
+    content: '\f41b';
+}
+
+.fa-reddit:before {
+    content: '\f1a1';
+}
+
+.fa-sass:before {
+    content: '\f41e';
+}
+
+.fa-skype:before {
+    content: '\f17e';
+}
+
+.fa-slack:before {
+    content: '\f198';
+}
+
+.fa-slack-hash:before {
+    content: '\f3ef';
+}
+
+.fa-tumblr:before {
+    content: '\f173';
+}
+
+.fa-tumblr-square:before {
+    content: '\f174';
+}
+
+.fa-twitter:before {
+    content: '\f099';
+}
+
+.fa-vuejs:before {
+    content: '\f41f';
+}
+
+.fa-youtube:before {
+    content: '\f167';
+}
+// far
+// fas
+.fa-check:before {
+    content: '\f00c';
+}
+
+.fa-print:before {
+    content: '\f02f';
+}
+
+.fa-times:before {
+    content: '\f00d';
+}
