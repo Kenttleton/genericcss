@@ -22,9 +22,10 @@
     "build:scss": "parcel build genericcss/_styles.scss --out-dir build/ --out-file genericcss.bundle.scss ",
     "build:js": "parcel build genericcss/index.js --out-dir build/ --out-file genericcss.bundle.js "
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.0"
+  },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.6.0",
     "parcel": "^1.10.3",
     "sass": "^1.15.2"
   }

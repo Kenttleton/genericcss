@@ -1,0 +1,23 @@
+@import 'RWD';
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: breakpoint('ms-small-max')) {
+    .hidden-small-only {
+        display: none !important;
+    }
+}
+
+@media (min-width: breakpoint('ms-medium-min')) {
+    .hidden-medium-only {
+        display: none !important;
+    }
+}
+
+@media (min-width: breakpoint('ms-large-min')){
+    .hidden-large-only {
+        display: none !important;
+    }
+}
