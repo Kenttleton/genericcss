@@ -23,3 +23,7 @@ Notes:
 - IE and Edge are not 100% verified to work in current version
 - In-depth documentation using [DocumentCSS](https://documentcss.com/) coming soon.
 - [Yarn](https://yarnpkg.com/en/) management/workflow and a lightweight bundler/minification package like [Parcel](https://parceljs.org/) coming soon.
+
+
+## Conclusion
+Due to the discovery of better flex based frameworks like [UIKit](https://getuikit.com/) that were extensible and light and the lack of legacy support for CSS Grid in IE this project was ultimate abandoned for more compatible alternatives. Development may continue in the future when support for CSS Grid is mainstream and 3 iterations before current versions.  
